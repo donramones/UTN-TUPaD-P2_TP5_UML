@@ -20,6 +20,9 @@ public class Usuario {
 
     public void setCelular(Celular celular) {
         this.celular = celular;
+        if (celular != null && celular.getUsuario() != this){
+            celular.setUsuario(this);
+        }
     }
 
     public String getNombre() {
@@ -30,11 +33,17 @@ public class Usuario {
         return celular;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "dni=" + dni + ", nombre=" + nombre + ", celular=" + celular + '}';
+        String infoCelular = (this.celular != null) ? this.celular.getMarca() + " " + this.celular.getModelo() : "Sin asignar";
+        return "Usuario{" + "dni=" + dni + ", nombre=" + nombre + ", celular=" + celular + infoCelular +"}";
     }
     
     
+   
     
 }
