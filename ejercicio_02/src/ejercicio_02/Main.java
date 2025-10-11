@@ -14,7 +14,19 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Bateria bateria = new Bateria("XOXO-5000", "5000mAh");
+        
+        Usuario usuario = new Usuario ("28.789.99", "Saitama one ");
+        
+        Celular celular = new Celular ("3517892347", "Xiaomi", "Note 14", bateria);
+        
+        celular.setUsuario(usuario);
+        
+        System.out.println(celular);
+        System.out.println();
+        System.out.println(usuario);
+        System.out.println();
+          
     }
     
 }
