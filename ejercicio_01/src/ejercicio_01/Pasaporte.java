@@ -18,9 +18,16 @@ public class Pasaporte {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
         this.foto = new Foto (imagen, formato);
-        this.titular = titular;
-        titular.setPasaporte(this);
+        
     }
+
+    public void setTitular(Titular titular) {
+        this.titular = titular;
+        if (titular != null && titular.getPasaporte() != this){
+            titular.setPasaporte(this);
+        }
+    }
+    
 
     public String getNumero() {
         return numero;
@@ -36,6 +43,11 @@ public class Pasaporte {
 
     public Titular getTitular() {
         return titular;
+    }
+
+    @Override
+    public String toString() {
+        return "Pasaporte{" + "numero=" + numero + ", fechaEmision=" + fechaEmision + ", foto=" + foto + ", titular=" + titular + '}';
     }
    
     
