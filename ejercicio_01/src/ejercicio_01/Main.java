@@ -14,7 +14,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Titular titular = new Titular("30.123.999", "Atomic Samurai");
+        Pasaporte pasaporte = new Pasaporte("CHI98765XYZ", "30-09-2025", "/img/foto_pasaporte_samu.jpg", "JPG");
+        
+        pasaporte.setTitular(titular);
+        
+        System.out.println("Titular: " + titular.getNombre() + " - Pasaporte Nº: " + titular.getPasaporte().getNumero());
+        System.out.println("Foto formato: " + pasaporte.getFoto().getFormato());
+        
     }
     
 }
