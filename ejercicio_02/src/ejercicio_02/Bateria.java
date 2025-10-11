@@ -21,7 +21,9 @@ public class Bateria {
     public String toString() {
         return "Bateria{" + "modelo=" + modelo + ", capacidad=" + capacidad + '}';
     }
+
     
+
     
     
 }
