@@ -37,6 +37,18 @@ public class CitaMedica {
         return paciente;
     }
     
+     public void mostrarDetalle() {
+        System.out.println("--- DETALLE DE LA CITA MÉDICA ---");
+        System.out.printf("Fecha: %s | Hora: %.2f\n", fecha, hora);
+        System.out.println("------------------------------------");
+        System.out.println("Paciente Asociado: " + paciente.getNombre() + " (" + paciente.getObraSocial() + ")");
+        System.out.println("Profesional Asociado: " + profecional.getNombreProfesional() + " | Especialidad: " + profecional.getEspecialidad());
+        System.out.println("------------------------------------");
+         
+     }
+    
+    
+    
     
     
 }
