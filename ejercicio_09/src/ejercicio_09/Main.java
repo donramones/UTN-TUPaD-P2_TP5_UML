@@ -18,9 +18,10 @@ public class Main {
         Profecional profecional1 = new Profecional("Dr Hause", "Clinica medica");
         
         System.out.println("Cita medica");
-        CitaMedica cita = new CitaMedica ("10-1-025", 10 30, paciente1, profecional1);
-        
-        
+        CitaMedica cita = new CitaMedica ("10-1-025", "10.30", profecional1, paciente1);
+        System.out.println("Cita Creada.");
+        cita.mostrarDetalle();
+      
         
         
     }
